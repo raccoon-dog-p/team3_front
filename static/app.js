@@ -15,7 +15,8 @@ function getCookie(cookie_name) {
     }
   }
 
-
+ 
+access_token = getCookie("token")
 
 function delCookie(key) {
 
@@ -26,7 +27,6 @@ function delCookie(key) {
 if(typeof(access_token) == 'undefined' || access_token.length<20){
     request("코미디","None,None,None,None,None","1")
     }else{
-        access_token = getCookie("token")
         let login_li = document.getElementById('login');
         let register_li = document.getElementById("register");
         let menu_bar = document.getElementById("menu-bar-ul")
