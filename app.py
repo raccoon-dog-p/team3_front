@@ -45,4 +45,4 @@ def rec():
     return render_template("rec.html")
 
 if __name__ == '__main__' :
-    app.run()
+    app.run(host="52.78.40.92",port="8505")
