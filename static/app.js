@@ -15,7 +15,7 @@ function getCookie(cookie_name) {
     }
   }
 
-access_token = getCookie("token")
+
 
 function delCookie(key) {
 
@@ -23,6 +23,7 @@ function delCookie(key) {
 
 }
 if(access_token.length > 15){
+    access_token = getCookie("token")
     let login_li = document.getElementById('login');
     let register_li = document.getElementById("register");
     let menu_bar = document.getElementById("menu-bar-ul")
