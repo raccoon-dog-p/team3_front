@@ -23,23 +23,24 @@ function delCookie(key) {
 
 }
 
-if(typeof access_token === 'undefined' || access_token.length >15){
-    access_token = getCookie("token")
-    let login_li = document.getElementById('login');
-    let register_li = document.getElementById("register");
-    let menu_bar = document.getElementById("menu-bar-ul")
-    login_li.parentNode.removeChild(login_li);
-    register_li.parentNode.removeChild(register_li);
-    let logout_li = document.createElement("li")
-    let logout_a = document.createElement("a")
-    logout_li.appendChild(logout_a);
-    logout_a.innerText="로그아웃"
-    logout_a.addEventListener("click",request_logout);
-    logout_li.id="logout"
-    menu_bar.appendChild(logout_li);
-    request_rec();
+if(typeof access_token === 'undefined' || access_token.length == "undefined"){
+    request("코미디","None,None,None,None,None","1")
     }else{
-        request("코미디","None,None,None,None,None","1")
+        access_token = getCookie("token")
+        let login_li = document.getElementById('login');
+        let register_li = document.getElementById("register");
+        let menu_bar = document.getElementById("menu-bar-ul")
+        login_li.parentNode.removeChild(login_li);
+        register_li.parentNode.removeChild(register_li);
+        let logout_li = document.createElement("li")
+        let logout_a = document.createElement("a")
+        logout_li.appendChild(logout_a);
+        logout_a.innerText="로그아웃"
+        logout_a.addEventListener("click",request_logout);
+        logout_li.id="logout"
+        menu_bar.appendChild(logout_li);
+        request_rec();
+        
     }
 
 
@@ -59,7 +60,7 @@ function request_logout(){
             alert(data.error);
         }else{
             alert(data.result);
-            access_token=""
+            access_token="undefined"
             location.reload();
         } // if 끝
         
