@@ -21,7 +21,7 @@ function delCookie(key) {
     getCookie(key)=""
 
 }
-if(access_token.length < 5){
+if(access_token.length > 15){
     let login_li = document.getElementById('login');
     let register_li = document.getElementById("register");
     let menu_bar = document.getElementById("menu-bar-ul")
