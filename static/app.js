@@ -1,10 +1,21 @@
 contents_url = "http://127.0.0.1:5000/contents?movie_id="
 
-function get_token(){
-    let cookie = document.cookie
-    token = cookie.split("=",2)[1];
-    return token
-}
+
+function getCookie(cookie_name) {
+    var x, y;
+    var val = document.cookie.split(';');
+  
+    for (var i = 0; i < val.length; i++) {
+      x = val[i].substring(0, val[i].indexOf('='));
+      y = val[i].substring(val[i].indexOf('=') + 1);
+      x = x.replace(/^\s+|\s+$/g, ''); // 앞과 뒤의 공백 제거하기
+      if (x == cookie_name) {
+        return (y); // unescape로 디코딩 후 값 리턴
+      }
+    }
+  }
+
+console.log(getCookie("token"))
 
 function delCookie(key) {
 
