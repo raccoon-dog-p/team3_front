@@ -57,7 +57,7 @@ function request_logout(){
             alert(data.error);
         }else{
             alert(data.result);
-            delCookie("token")
+            access_token=""
             location.reload();
         } // if 끝
         
