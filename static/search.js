@@ -1,4 +1,4 @@
-contents_url = "http://127.0.0.1:5000/contents?movie_id="
+contents_url = "http://52.78.40.92:5001/contents?movie_id="
 function request_search(keyword,provider) {
     encodeURI(encodeURIComponent(provider));
     encodeURI(encodeURIComponent(keyword));

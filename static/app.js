@@ -1,4 +1,4 @@
-contents_url = "http://127.0.0.1:5000/contents?movie_id="
+contents_url = "http://52.78.40.92:5001/contents?movie_id="
 
 
 function getCookie(cookie_name) {
@@ -10,7 +10,7 @@ function getCookie(cookie_name) {
       y = val[i].substring(val[i].indexOf('=') + 1);
       x = x.replace(/^\s+|\s+$/g, ''); // 앞과 뒤의 공백 제거하기
       if (x == cookie_name) {
-        return (y); // unescape로 디코딩 후 값 리턴
+        return unescape(y); // unescape로 디코딩 후 값 리턴
       }
     }
   }
