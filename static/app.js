@@ -23,7 +23,7 @@ function delCookie(key) {
 
 }
 
-if(typeof access_token === 'undefined' || access_token.length ==0){
+if(typeof access_token === 'undefined' || access_token.length >15){
     access_token = getCookie("token")
     let login_li = document.getElementById('login');
     let register_li = document.getElementById("register");
