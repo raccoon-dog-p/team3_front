@@ -15,16 +15,14 @@ function getCookie(cookie_name) {
     }
   }
 
-console.log(getCookie("token"))
+access_token = getCookie("token")
 
 function delCookie(key) {
 
-    document.cookie=key+"=;";
+    getCookie(key)=""
 
 }
-if(document.cookie.length != 0){ 
-access_token= get_token();
-if(access_token.length != 0){
+if(access_token.length < 5){
     let login_li = document.getElementById('login');
     let register_li = document.getElementById("register");
     let menu_bar = document.getElementById("menu-bar-ul")
@@ -41,7 +39,7 @@ if(access_token.length != 0){
     }else{
         request("코미디","None,None,None,None,None","1")
     }
-}
+
 
 function request_logout(){
     
