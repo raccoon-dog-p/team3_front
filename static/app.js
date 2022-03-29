@@ -23,7 +23,7 @@ function delCookie(key) {
 
 }
 
-if(typeof access_token === 'undefined' || access_token == "undefined"){
+if(typeof(access_token) == 'undefined' || access_token.length<20){
     request("코미디","None,None,None,None,None","1")
     }else{
         access_token = getCookie("token")
