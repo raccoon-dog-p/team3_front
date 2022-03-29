@@ -60,7 +60,7 @@ function request_logout(){
             alert(data.error);
         }else{
             alert(data.result);
-            access_token="undefined"
+            document.cookie="token="+""
             location.reload();
         } // if 끝
         
