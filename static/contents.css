@@ -1,0 +1,160 @@
+.Home_body{
+    width: 1920px;
+    height: 2215px;
+    padding: 20px 0 296px 80px;
+    background-color: #232323;
+  }
+
+
+
+.menu-bar a{
+    font-family: SegoeUI;
+    font-size: 18px;
+    color:white;
+    list-style-type: none;
+    margin-left: 30px;
+    text-decoration: none;
+}
+
+.menu-bar ul{
+    display: inline-block;
+    list-style: none;
+}
+
+.menu-bar li{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.menu-bar li.search{
+    margin-left:913px;
+}
+
+::-webkit-input-placeholder{
+    color: white;
+    background-color: #545454;
+
+}
+
+
+input,textarea{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: #545454;
+    width: 240px;
+    height: 30px;
+}
+
+input:placeholder-shown{
+    border: 5px solid #545454;
+    background-color: #545454;
+}
+
+#movie{
+    margin-top: 100px;
+    margin-left: 60px;
+    font-family: SegoeUI;
+    list-style: none;
+}
+
+
+
+.favorite_one {
+    position:absolute;
+    width: 24px;
+    height: 34px;
+    margin-left: 280px;
+    margin-top: 15px;
+}
+
+
+
+hr{
+    margin: 20px;
+}
+
+
+#poster{
+    width: 350px;
+    height: 420px;
+    float: left;
+    margin: 15px;
+    
+}
+h1{
+    font-size: 50px;
+    color: #fff;
+}
+div{
+    padding:20px;
+    
+}
+
+#div1{
+    font-size: 20px;
+    color: #fff;
+    
+    
+}
+
+#div2{
+    font-size: 20px;
+    color: #fff;
+    margin-left: 20px;
+}
+
+#div3{
+    font-size: 20px;
+    color: #fff;
+    
+}
+
+.provider ul{
+    -webkit-padding-start: 0;
+    display: inline-block;
+    list-style: none;
+}
+
+.provider li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#div4{
+    font-size: 20px;
+    color: #fff;
+    
+}
+
+h2{
+    margin-left:15px;
+    font-size: 60;
+    color: #fff;
+}
+
+
+
+
+
+.row_poster ul{
+
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.row_poster li{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#rec_con{
+    margin-left: 80px;
+}
+
+.favorite {
+    position:absolute;
+    width: 24px;
+    height: 34px;
+    margin-left: 200px;
+    
+}

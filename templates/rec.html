@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='rec.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-pie.min.js"></script>
+    
+    
+    <title>TTT.</title>
+    
+    
+</head>
+<body style="background-color: #232323;">
+    <div class="Home_body">
+        <div class="menu-bar">          
+        <ul id="menu-bar-ul">
+            <li><a href="{{url_for('home')}}"><img src="https://pys9-flask-logo.s3.amazonaws.com/logo.png" width="117px" height="42px"></a></li>
+            <li><a id="rec" href="{{url_for('rec')}}">추천받기</a></li>
+            <li><a href="{{url_for('bookmark')}}">북마크</a></li>
+            <li><form action= "{{url_for('search',variable=name)}}" method="get"><li class="search"><input name = keyword placeholder="제목으로 검색" type="search">
+            </form></li>
+            <li id="login"><a href="{{url_for('login')}}">로그인</a></li>
+            <li id="register"><a href="{{url_for('register')}}">회원가입</a></li>
+        </div>
+        <h1 id="title">추천 상위 10개</h1>
+       
+            <div class = "card-deck" id="c_d_1">
+                
+                <div class="card bg-dark">
+                    <img class="card-img-top" src="https://images.justwatch.com/poster/249771403/s592">
+                    <div class="card-body">
+                        <a href="#" class="card-link">
+                            <h4 class="card-title">ddd</h4>
+                        </a>
+                        
+                    </div>
+                    
+                </div>    
+                <div class="card bg-dark" >
+                    <img class="card-img-top" src="https://images.justwatch.com/poster/249771403/s592">
+                    <div class="card-body">
+                        <a href="#" class="card-link">
+                            <h4 class="card-title">ddd</h4>
+                        </a>
+                      
+                        
+                    </div>
+                    
+                </div>
+                    
+                    
+                <div class="card bg-dark" >
+                    <img class="card-img-top" src="https://images.justwatch.com/poster/249771403/s592">
+                    <div class="card-body">
+                        <a href="#" class="card-link">
+                            <h4 class="card-title">ddd</h4>
+                        </a>
+                       
+                    </div>
+                    
+                </div>
+
+                <div class="card bg-dark" >
+                    <img class="card-img-top" src="https://images.justwatch.com/poster/249771403/s592">
+                    <div class="card-body">
+                        <a href="#" class="card-link">
+                            <h4 class="card-title">ddd</h4>
+                        </a>
+
+                        
+                    </div>
+                    
+                </div>
+                <div class="card bg-dark" >
+                    <img class="card-img-top" src="https://images.justwatch.com/poster/249771403/s592">
+                    <div class="card-body">
+                        <a href="#" class="card-link">
+                            <h4 class="card-title">ddd</h4>
+                        </a>
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            <div class = "card-deck" id="c_d_2">
+                
+                <div class="card bg-dark" >
+                    <img class="card-img-top" src="https://images.justwatch.com/poster/249771403/s592">
+                    <div class="card-body">
+                        <a href="#" class="card-link">
+                            <h4 class="card-title">ddd</h4>
+                        </a>
+                       
+                        
+                    </div>
+                    
+                </div>    
+                <div class="card bg-dark" >
+                    <img class="card-img-top" src="https://images.justwatch.com/poster/249771403/s592">
+                    <div class="card-body">
+                        <a href="#" class="card-link">
+                            <h4 class="card-title">ddd</h4>
+                        </a>
+                       
+                        
+                    </div>
+                    
+                </div>
+                    
+                    
+                <div class="card bg-dark" >
+                    <img class="card-img-top" src="https://images.justwatch.com/poster/249771403/s592">
+                    <div class="card-body">
+                        <a href="#" class="card-link">
+                            <h4 class="card-title">ddd</h4>
+                        </a>
+                       
+                        
+                    </div>
+                    
+                </div>
+
+                <div class="card bg-dark" >
+                    <img class="card-img-top" src="https://images.justwatch.com/poster/249771403/s592">
+                    <div class="card-body">
+                        <a href="#" class="card-link">
+                            <h4 class="card-title">ddd</h4>
+                        </a>
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="card bg-dark" >
+                    <img class="card-img-top" src="https://images.justwatch.com/poster/249771403/s592">
+                    <div class="card-body">
+                        <a href="#" class="card-link">
+                            <h4 class="card-title">ddd</h4>
+                        </a>
+                       
+                    </div>
+                    
+                </div>
+            </div>
+            <h1 id="flat">당신에게 추천하는 플랫폼은?</h1>
+            <div id="per">
+                <ul>
+                    <li><h3>1위 넷플릭스</h3></li>
+                    <li><h3>2위 왓챠</h3></li>
+                    <li><h3>3위 왓챠</h3></li>
+                    <li><h3>4위 왓챠</h3></li>
+                    <li><h3>5위 왓챠</h3></li>
+                </ul>
+            </div>
+            
+            <div id="container">
+
+            </div>
+            
+    </div>
+    
+<script>
+contents_url = "http://127.0.0.1:5000/contents?movie_id="
+
+function get_token(){
+    let cookie = document.cookie
+    token = cookie.split("=",2)[1];
+    return token
+}
+
+function delCookie(key) {
+
+    document.cookie=key+"=;";
+
+}
+
+
+
+if(document.cookie.length != 0){ 
+access_token= get_token();
+if(access_token.length != 0){
+    let login_li = document.getElementById('login');
+    let register_li = document.getElementById("register");
+    let menu_bar = document.getElementById("menu-bar-ul")
+    login_li.parentNode.removeChild(login_li);
+    register_li.parentNode.removeChild(register_li);
+    let logout_li = document.createElement("li")
+    let logout_a = document.createElement("a")
+    logout_li.appendChild(logout_a);
+    logout_a.innerText="로그아웃"
+    logout_a.addEventListener("click",request_logout);
+    logout_li.id="logout"
+    menu_bar.appendChild(logout_li);
+}}
+
+function request_logout(){
+    
+    fetch('https://em1442145b.execute-api.us-east-1.amazonaws.com/dev/api/logout',{
+      method: 'POST',
+      headers:{
+          'Authorization':access_token
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data.hasOwnProperty("error"))
+        console.log(data)   
+        if(data.hasOwnProperty("error")){
+            alert(data.error);
+        }else{
+            alert(data.result);
+            delCookie("token")
+            location.reload();
+        } // if 끝
+        
+    }) // data 끝
+        
+    }
+
+
+
+fetch("http://3.37.61.76:5001/6",// 억세스 토큰 필요
+    {method:'GET',
+    headers:{
+        'Authorization':access_token
+    }})
+    .then((response) => response.json())
+    .then((data) => {
+// ------------------- 차트 시작
+    
+    var data_set = anychart.data.set([
+    data.per[0],
+    data.per[1],
+    data.per[2],
+    data.per[3],
+    data.per[4],
+    
+     ]);
+
+    var palette = anychart.palettes.rangeColors();
+    palette.items([{ color: '#00FFC2' }, { color: '#545454' }]);
+
+
+  // create a pie chart with the data
+    var chart = anychart.pie(data_set)
+    // set the chart radius making a donut chart
+    chart.innerRadius('55%');
+    chart.background({fill: "#232323"});
+    chart.palette(palette)
+    chart.title('내 추천작이 속해있는 플랫폼')
+    chart.container('container');
+    chart.draw();
+    
+    let rating_1 = document.getElementById("per").childNodes[1].childNodes[1].childNodes[0]
+    rating_1.innerText="1위는 " + data.per[0][0] + "이며 " + data.per[0][1] + "% 의 작품이 속해있습니다."
+    let rating_2 = document.getElementById("per").childNodes[1].childNodes[3].childNodes[0]
+    rating_2.innerText="2위는 " + data.per[1][0] + "이며 " + data.per[1][1] + "% 의 작품이 속해있습니다."
+    let rating_3 = document.getElementById("per").childNodes[1].childNodes[5].childNodes[0]
+    rating_3.innerText="3위는 " + data.per[2][0] + "이며 " + data.per[2][1] + "% 의 작품이 속해있습니다."
+    let rating_4 = document.getElementById("per").childNodes[1].childNodes[7].childNodes[0]
+    rating_4.innerText="4위는 " + data.per[3][0] + "이며 " + data.per[3][1] + "% 의 작품이 속해있습니다."
+    let rating_5 = document.getElementById("per").childNodes[1].childNodes[9].childNodes[0]
+    rating_5.innerText="5위는 " + data.per[4][0] + "이며 " + data.per[4][1] + "% 의 작품이 속해있습니다."
+// ----------------------- 차트 끝
+    
+// ------- 카드 뷰 작업 시작
+    let result = data.result
+    for(let i=0;i<10;i++){
+    let movie_id = result[i][0]['index']
+    let poster = result[i][0]['poster']
+    let provider = result[i][0]['provider']
+    provider=provider.split(",")
+
+    
+
+    let title = result[i][0]['title']
+    let urls = result[i][0]['urls']
+    urls=urls.split(",")
+
+    let card= document.getElementsByClassName("card bg-dark").item(i);
+    let card_img = card.childNodes[1] 
+    card_img.src=poster
+    let card_body = card.childNodes[3]
+    let card_a = card_body.childNodes[1]
+    card_a.href=contents_url+movie_id
+    let card_title = card_a.childNodes[1]
+    card_title.innerText=title
+    let card_text = card_body.childNodes[4]
+
+
+    }
+
+    }).catch(error => {alert("로그인 하시거나 최소 1개 이상의 북마크가 필요합니다!")
+    location.href= "http://127.0.0.1:5000/"
+}
+    ) 
+
+</script>          
+</body>
+</html>  

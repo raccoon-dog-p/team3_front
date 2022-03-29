@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+
+</head>
+<body style='background-color: #232323;'>
+    <section class="register-form" >
+        <div class="menu-bar">
+            <li><a href="{{url_for('home')}}"><img src="https://pys9-flask-logo.s3.amazonaws.com/logo.png"
+                width="200px" height="100px" ></a></li>
+        </div>
+        <h1>TTT. 회원가입</h1>
+        <div class="span-area">
+            <span>이메일로 간편하게 TTT.를 시작하세요!</span>
+        </div>
+        <form name="myform" onsubmit="return checkz()">
+                <div class="int-area">
+                    <input type="email" name="email" id="e_id"
+                    autocomplete="off"  required>
+                    <label for="e_id">이메일</label>
+                </div>
+                <div class="int-area">
+                    <input type="text" name="name" id="n_id"
+                    autocomplete="off" required>
+                    <label for="n_id">이름</label>
+                </div>
+                <div class="int-area">
+                    <input type="password" name="password" id="pw_1"
+                    autocomplete="off" minlength="4" maxlength="10" required>
+                    <label for="pw_1">비밀번호</label>
+                </div>
+                <div class="span-area">
+                    <span>영문, 숫자, 특수문자 조합 4~10 자리</span>
+                </div>
+                <div class="int-area">
+                    <input type="password" name="pw_2" id="pw_2"
+                    autocomplete="off" minlength="4" maxlength="10" required>
+                    <label for="pw_2">비밀번호 확인</label>
+
+                </div>
+                <div class="btn-area">
+                    <input id="btn"
+                    type="submit"  value="가입하기">
+                </div>
+                
+            </form>
+            
+    </section>
+
+    <script>
+        function checkz() {
+            
+            var getMail = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
+            var getCheck= RegExp(/^[a-zA-Z0-9]{4,10}$/);
+            var getName= RegExp(/^[가-힣]+$/);
+            
+            
+            //비밀번호
+            if(!/^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{4,10}$/.test(($('#pw_1').val()))){            
+                alert('숫자+영문자+특수문자 조합으로 4자리 이상 사용해야 합니다.');
+                $('#pw_1').val('').focus();
+                return false;
+            }    
+       
+            //비밀번호 똑같은지
+            if( $("#pw_1").val() != ($("#pw_2").val())){ 
+                alert("비밀번호가 틀렸습니다.");
+                $("#pw_1").val("");
+                $("#pw_2").val("");
+                $("#pw_2").focus();
+                return false;
+            }
+       
+           //이메일 공백 확인
+            if($("#e_id").val() == ""){
+              alert("이메일을 입력해주세요");
+              $("#e_id").focus();
+              return false;
+            }
+                 
+            //이메일 유효성 검사
+            if(!getMail.test($("#e_id").val())){
+              alert("이메일형식에 맞게 입력해주세요")
+              $("#e_id").val("");
+              $("#e_id").focus();
+              return false;
+            }
+        }
+            
+        document.addEventListener("submit",sendData);
+        function sendData(e){
+            e.preventDefault();
+            const email = document.querySelector("#e_id").value;
+            const name= document.querySelector("#n_id").value;
+            const password = document.querySelector("#pw_1").value;
+
+            fetch('https://em1442145b.execute-api.us-east-1.amazonaws.com/dev/api/register',{
+                method:"POST",
+                headers:{
+                    
+                    "Content-Type":"application/json"
+                },
+                body:JSON.stringify({
+                    email:email,
+                    name:name,
+                    password:password
+                })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if(data.hasOwnProperty("error")){
+                    alert(data.error);
+                }else{
+                    alert(data.result);
+                    let access_token= data.access_token
+                    document.cookie="token="+"Bearer "+access_token
+                    location.href="http://127.0.0.1:5000/";
+                }
+                
+                
+        });
+    }
+        
+        
+        
+        
+        
+        
+    
+        
+                
+
+              
+    </script>
+</body>
+</html>

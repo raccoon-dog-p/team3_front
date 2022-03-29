@@ -1,0 +1,112 @@
+.Home_body{
+    width: 1920px;
+    height: 2000px;
+    padding: 20px 0 296px 80px;
+    background-color: #232323;
+  }
+
+
+
+.menu-bar a{
+    font-family: SegoeUI;
+    font-size: 18px;
+    color:white;
+    list-style-type: none;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.menu-bar ul{
+    display: inline-block;
+    list-style: none;
+}
+
+.menu-bar li{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.menu-bar li.search{
+    margin-left:913px;
+}
+
+::-webkit-input-placeholder{
+    color: white;
+    background-color: #545454;
+
+}
+
+
+input,textarea{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: #545454;
+    width: 240px;
+    height: 30px;
+}
+
+input:placeholder-shown{
+    border: 5px solid #545454;
+    background-color: #545454;
+}
+
+
+
+#title{
+    font-family: SegoeUI;
+    color: #fff;
+    margin-top: 60px;
+    margin-left: 60px;
+}
+
+.card-img-top{
+    height: 90%;
+    object-fit: cover;
+}
+
+.card-title{
+    color: white;
+    font-family: SegoeUI;
+    margin-bottom: 0.75rem;
+}
+
+
+#c_d_1{
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+
+#c_d_2{
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+#flat{
+    font-family: SegoeUI;
+    color: #fff;
+    margin-top: 100px;
+    margin-left: 60px;
+}
+
+
+#container{
+    width: 40%;
+    height: 40%;
+    margin: 0;
+    padding: 0;
+    margin-top: 100px;
+    margin-right: 100px;
+    
+    transform: translate(120%,-100%);
+    
+    
+}
+
+
+#per h3{
+    font-family: SegoeUI;
+    color: #fff;
+    margin-top: 70px;
+    margin-left: 60px;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='contents.css') }}">
+    <script src="{{ url_for('static', filename='contents.js') }}" defer></script>
+    <title>TTT.</title>
+</head>
+<body style="background-color: #232323;">
+    <div class="Home_body">
+        <div class="menu-bar">          
+        <ul id="menu-bar-ul">
+            <li><a href="{{url_for('home')}}"><img src="https://pys9-flask-logo.s3.amazonaws.com/logo.png" width="117px" height="42px"></a></li>
+            <li><a href="{{url_for('rec')}}">추천받기</a></li>
+            <li><a id= "rec" href="{{url_for('bookmark')}}">북마크</a></li>
+            <li><form action= "{{url_for('search',variable=name)}}" method="get"><li class="search"><input name = keyword placeholder="제목으로 검색" type="search">
+            </form></li>
+            <li id="login"><a href="{{url_for('login')}}">로그인</a></li>
+            <li id="register"><a href="a">회원가입</a></li>
+        </div>
+        <div id = "movie">
+            <svg class="favorite_one" id="svg_id" data-name="구성 요소 4 – 122 0 24 33" >
+                <path id="path_id" data-name="패스 8" d="M0,0H24V33L12.077,24.315,0,33Z" fill="#545454" opacity="0.63" xmlns="http://www.w3.org/2000/svg" width="24px" height="33px" viewBox="0">
+                </svg>
+            <img id="poster" src="">
+            
+            <h1 id="title"></h1>
+            <br>
+            <hr>
+            <div id = "div1">
+                
+            </div>
+            
+            <div id = "div2">
+                
+            </div>
+            
+            <div class="provider" id = "div3">
+                <span>제공</span>
+                <ul id="provider">
+                    
+                    
+                </ul>
+                
+            </div>
+            
+            <h2>줄거리</h2>
+            <div id="div4">
+                
+               
+
+            </div>
+
+        </div>
+
+        <h1 id="rec_con">관련 컨텐츠</h1>
+        <div class="row_poster">
+            <ul>
+            <li><svg class="favorite" id="svg_2_0" data-name="구성 요소 4 – 122 0 24 33">
+                <path id="path_2_0" data-name="패스 8" d="M0,0H24V33L12.077,24.315,0,33Z" fill="#545454" opacity="0.63" xmlns="http://www.w3.org/2000/svg" width="24px" height="33px" viewBox="0">
+                </svg> <a id= poster_2_0_a href="contents/m_id"><img id=poster_2_0 src=https://images.justwatch.com/poster/249771403/s592 width="241px" height="348px"></a></li>    
+            <li><svg class="favorite"id="svg_2_1" data-name="구성 요소 4 – 122 0 24 33">
+                <path id="path_2_1" data-name="패스 8" d="M0,0H24V33L12.077,24.315,0,33Z" fill="#545454" opacity="0.63" xmlns="http://www.w3.org/2000/svg" width="24px" height="33px" viewBox="0">
+                </svg> <a id= poster_2_1_a href="a"><img id=poster_2_1 src=https://images.justwatch.com/poster/249771403/s592 width="241px" height="348px"></li></a>    
+            <li><svg class="favorite" id="svg_2_2"data-name="구성 요소 4 – 122 0 24 33">
+                <path id="path_2_2" data-name="패스 8" d="M0,0H24V33L12.077,24.315,0,33Z" fill="#545454" opacity="0.63" xmlns="http://www.w3.org/2000/svg" width="24px" height="33px" viewBox="0">
+                </svg> <a id= poster_2_2_a href="a"><img id=poster_2_2 src=https://images.justwatch.com/poster/249771403/s592 width="241px" height="348px"></li></a>    
+            <li><svg class="favorite" id="svg_2_3" data-name="구성 요소 4 – 122 0 24 33">
+                <path id="path_2_3" id="svg_2_0" data-name="패스 8" d="M0,0H24V33L12.077,24.315,0,33Z" fill="#545454" opacity="0.63" xmlns="http://www.w3.org/2000/svg" width="24px" height="33px" viewBox="0">
+                </svg> <a id= poster_2_3_a href="a"><img id=poster_2_3 src=https://images.justwatch.com/poster/249771403/s592 width="241px" height="348px"></li></a>    
+            <li><svg class="favorite" id="svg_2_4" data-name="구성 요소 4 – 122 0 24 33">
+                <path id="path_2_4" data-name="패스 8" d="M0,0H24V33L12.077,24.315,0,33Z" fill="#545454" opacity="0.63" xmlns="http://www.w3.org/2000/svg" width="24px" height="33px" viewBox="0">
+                </svg> <a id= poster_2_4_a href="a"><img id=poster_2_4 src=https://images.justwatch.com/poster/249771403/s592 width="241px" height="348px"></li></a>    
+            <li><svg class="favorite"  id="svg_2_5" data-name="구성 요소 4 – 122 0 24 33">
+                <path id="path_2_5" data-name="패스 8" d="M0,0H24V33L12.077,24.315,0,33Z" fill="#545454" opacity="0.63" xmlns="http://www.w3.org/2000/svg" width="24px" height="33px" viewBox="0">
+                </svg> <a id= poster_2_5_a href="a"><img id=poster_2_5 src=https://images.justwatch.com/poster/249771403/s592 width="241px" height="348px"></li></a>
+            <li><svg class="favorite" id="svg_2_6" data-name="구성 요소 4 – 122 0 24 33">
+                <path id="path_2_6" data-name="패스 8" d="M0,0H24V33L12.077,24.315,0,33Z" fill="#545454" opacity="0.63" xmlns="http://www.w3.org/2000/svg" width="24px" height="33px" viewBox="0">
+                </svg> <a id= poster_2_6_a href="a"><img id=poster_2_6 src=https://images.justwatch.com/poster/249771403/s592 width="241px" height="348px"></li></a>    
+        </ul>
+        </div>
+        </div>
+        
+  
+        
+        

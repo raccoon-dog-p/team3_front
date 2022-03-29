@@ -1,0 +1,110 @@
+.Home_body{
+    width: 1920px;
+    height: 2215px;
+    padding: 20px 0 296px 80px;
+    background-color: #232323;
+  }
+
+
+
+.menu-bar a{
+    font-family: SegoeUI;
+    font-size: 18px;
+    color:white;
+    list-style-type: none;
+    margin-left: 30px;
+    text-decoration: none;
+}
+
+.menu-bar ul{
+    display: inline-block;
+    list-style: none;
+}
+
+.menu-bar li{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.menu-bar li.search{
+    margin-left:913px;
+}
+
+::-webkit-input-placeholder{
+    color: white;
+    background-color: #545454;
+
+}
+
+
+input,textarea{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: #545454;
+    width: 240px;
+    height: 30px;
+}
+
+input:placeholder-shown{
+    border: 5px solid #545454;
+    background-color: #545454;
+}
+
+.navi-bar{
+    margin-left: 15px;
+}
+
+.navi-bar ul{
+    display: inline-block;
+    list-style: none;
+}
+
+.navi-bar li{
+    border: 2px solid #00FFC2;
+    border-radius: 10px;
+    display: inline-block;
+    margin-left: 12px;
+    margin-bottom: 0px;
+    height: 51px;
+} 
+
+.book_header {
+    display: inline-block;
+    font-family: SegoeUI;
+    color:white;
+    margin-left: 60px;
+}
+
+.favorite {
+    position:absolute;
+    width: 24px;
+    height: 34px;
+    margin-left: 200px;
+}
+
+.poster{
+    width: 240px;
+    height: 350px;
+}
+
+#head{
+    font-size: 18px;
+}
+
+#book_body {
+    margin-left: 60px;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    -webkit-padding-start: 0;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+#count {
+    font-family: SegoeUI;
+    color:white;
+    margin-inline-start: 60px;
+}

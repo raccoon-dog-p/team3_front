@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bookmark.css') }}?320">
+    <script src="{{ url_for('static', filename='bookmark.js') }}?09231" defer></script>
+    <title>TTT.</title>
+</head>
+<body style="background-color: #232323;">
+    <div class="Home_body">
+        <div class="menu-bar">          
+        <ul id="menu-bar-ul">
+            <li><a href="{{url_for('home')}}"><img src="https://pys9-flask-logo.s3.amazonaws.com/logo.png" width="117px" height="42px"></a></li>
+            <li><a id= "rec" href="{{url_for('rec')}}">추천받기</a></li>
+            <li><a href="{{url_for('bookmark')}}">북마크</a></li>
+            <li><form action= "{{url_for('search',variable=name)}}" method="get"><li class="search"><input name = keyword placeholder="제목으로 검색" type="search">
+            </form></li>
+            <li id="login"><a href="{{url_for('login')}}">로그인</a></li>
+            <li id="register"><a href="{{url_for('register')}}">회원가입</a></li>
+        </div>
+        <div class="navi-bar">
+            <ul>
+            <li id="nfx_tap"><img src=https://pys9-flask-logo.s3.amazonaws.com/Nfx.png width="51px" height="51px" ></li>
+            <li ><img id="prime_tap" src=https://pys9-flask-logo.s3.amazonaws.com/prime.png width="51px" height="51px"></li>
+            <li ><img id="watcha_tap" src=https://pys9-flask-logo.s3.amazonaws.com/watcha.png width="51px" height="51px"></li>
+            <li ><img id="wavve_tap" src=https://pys9-flask-logo.s3.amazonaws.com/wavve.png width="51px" height="51px"></li>
+            <li><img id="dnp_tap" src=https://pys9-flask-logo.s3.amazonaws.com/dnp.png width="51px" height="51px"></li>
+            </ul>
+        </div>
+        <div class="book_header">
+        <h1>북마크 
+        <span id="head">(최대 20개)</span>
+        </h1>
+        </div>
+        <h4 id="count"></h4>
+        <div id="book_body">
+        </div>
+    </div>
+    
+</body>

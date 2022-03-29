@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='search.css') }}">
+    <script src="{{ url_for('static', filename='search.js') }}" defer></script>
+    <title>TTT.</title>
+</head>
+<body style="background-color: #232323;">
+    <div class="Home_body">
+        <div class="menu-bar">          
+        <ul id="menu-bar-ul">
+            <li><a href="{{url_for('home')}}"><img src="https://pys9-flask-logo.s3.amazonaws.com/logo.png" width="117px" height="42px"></a></li>
+            <li><a id="rec" href="{{url_for('rec')}}">추천받기</a></li>
+            <li><a href="{{url_for('bookmark')}}">북마크</a></li>
+            <li><form action= "{{url_for('search',variable=name)}}" method="get"><li class="search"><input name = keyword placeholder="제목으로 검색" type="search">
+            </form></li>
+            <li id="login"><a href="{{url_for('login')}}">로그인</a></li>
+            <li id="register"><a href="a">회원가입</a></li>
+        </div>
+        <div class="navi-bar">
+            <ul>
+            <li id="nfx_tap"><img src=https://pys9-flask-logo.s3.amazonaws.com/Nfx.png width="51px" height="51px" ></li>
+            <li ><img id="prime_tap" src=https://pys9-flask-logo.s3.amazonaws.com/prime.png width="51px" height="51px"></li>
+            <li ><img id="watcha_tap" src=https://pys9-flask-logo.s3.amazonaws.com/watcha.png width="51px" height="51px"></li>
+            <li ><img id="wavve_tap" src=https://pys9-flask-logo.s3.amazonaws.com/wavve.png width="51px" height="51px"></li>
+            <li><img id="dnp_tap" src=https://pys9-flask-logo.s3.amazonaws.com/dnp.png width="51px" height="51px"></li>
+            </ul>
+            </div>
+        <div class="search_header">
+        <h1 id="keyword_head"></h1>
+        <span id="count_video"></span>
+        </div>
+        <!-- <div class="search_body">
+            <div class="poster" >
+                <a href="contents"><img src="logo\logo.png" width="300px" height="180px"></a>
+            </div>
+            <div class="description">
+                <a href="content">나니아 연대기</a>
+                
+                <ul id="provider">
+
+                <li><a href="url"><img src="logo/Nfx.png"></a></li>
+                <li><a href="url"><img src="logo/Nfx.png"></a></li>
+
+                </ul> -->
+            </div>
+        </div>
+
+
+

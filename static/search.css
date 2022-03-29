@@ -1,0 +1,133 @@
+.Home_body{
+    width: 1920px;
+    height: 2215px;
+    padding: 20px 0 296px 80px;
+    background-color: #232323;
+  }
+
+
+
+.menu-bar a{
+    font-family: SegoeUI;
+    font-size: 18px;
+    color:white;
+    list-style-type: none;
+    margin-left: 30px;
+    text-decoration: none;
+}
+
+.menu-bar ul{
+    display: inline-block;
+    list-style: none;
+}
+
+.menu-bar li{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.menu-bar li.search{
+    margin-left:913px;
+}
+
+::-webkit-input-placeholder{
+    color: white;
+    background-color: #545454;
+
+}
+
+
+input,textarea{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: #545454;
+    width: 240px;
+    height: 30px;
+}
+
+input:placeholder-shown{
+    border: 5px solid #545454;
+    background-color: #545454;
+}
+
+
+.navi-bar{
+    margin-left: 15px;
+}
+
+.navi-bar ul{
+    display: inline-block;
+    list-style: none;
+}
+
+.navi-bar li{
+    border: 2px solid #00FFC2;
+    border-radius: 10px;
+    display: inline-block;
+    margin-left: 12px;
+    margin-bottom: 0px;
+    height: 51px;
+} 
+
+.search_header h1{
+    color: white;
+    margin-left: 70px;
+}
+
+.search_header span{
+    color: white;
+    margin-left: 70px;
+}
+
+/* .search_body li{
+    margin-left: 70px;
+    margin-top: 100px;
+    display:inline-block;
+    vertical-align: text-top;
+    font-size: 25px;
+} */
+
+.search_body div{
+
+display: inline-block;
+margin-left: 70px;
+margin-top: 100px;
+vertical-align: middle;
+}
+
+.search_body.poster {
+    height: 180px;
+    float: left;
+}
+
+.search_body.description {
+    
+    float:left;
+}
+
+
+.search_body ul{
+    -webkit-margin-start: 0;
+    -webkit-padding-start: 0;
+    font-size: 20px;
+    list-style: none;
+    color: white;
+    margin-top: 30px;
+    text-align: bottom;
+}
+
+.search_body li{
+    float: left;
+    
+    margin-top: 50px;
+   
+    margin-right: 10px;
+}
+
+.search_body a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+
