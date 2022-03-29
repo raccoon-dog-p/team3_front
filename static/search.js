@@ -40,7 +40,30 @@ if(typeof(access_token) == 'undefined' || access_token.length<20){
       menu_bar.appendChild(logout_li);
       
   }
-
+function request_logout(){
+    
+    fetch('https://em1442145b.execute-api.us-east-1.amazonaws.com/dev/api/logout',{
+      method: 'POST',
+      headers:{
+          'Authorization':access_token
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data.hasOwnProperty("error"))
+        console.log(data)   
+        if(data.hasOwnProperty("error")){
+            alert(data.error);
+        }else{
+            alert(data.result);
+            document.cookie="token="+""
+            location.reload();
+        } // if 끝
+        
+    }) // data 끝
+        
+    }
+// 로그인이 되었을 경우 메뉴바에서 li 회원가입 로그인 제거 후 로그아웃 버튼 만들기
 function request_search(keyword,provider) {
     encodeURI(encodeURIComponent(provider));
     encodeURI(encodeURIComponent(keyword));
