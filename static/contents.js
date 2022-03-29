@@ -1,20 +1,25 @@
-// 1. 액세스 토큰 가져오기
-function get_token(){
-    let cookie = document.cookie
-    token = cookie.split("=",2)[1];
-    return token
-}
+function getCookie(cookie_name) {
+    var x, y;
+    var val = document.cookie.split(';');
+  
+    for (var i = 0; i < val.length; i++) {
+      x = val[i].substring(0, val[i].indexOf('='));
+      y = val[i].substring(val[i].indexOf('=') + 1);
+      x = x.replace(/^\s+|\s+$/g, ''); // 앞과 뒤의 공백 제거하기
+      if (x == cookie_name) {
+        return unescape(y); // unescape로 디코딩 후 값 리턴
+      }
+    }
+  }
+
+access_token = getCookie("token")
 
 function delCookie(key) {
 
-    document.cookie=key+"=;";
+    getCookie(key)=""
 
 }
-
-// 2. 가져온 토큰 기반으로 로그인 확인
-if(document.cookie.length != 0){ 
-access_token= get_token();
-if(access_token.length != 0){
+if(access_token.length < 5){
     let login_li = document.getElementById('login');
     let register_li = document.getElementById("register");
     let menu_bar = document.getElementById("menu-bar-ul")
@@ -27,7 +32,6 @@ if(access_token.length != 0){
     logout_a.addEventListener("click",request_logout);
     logout_li.id="logout"
     menu_bar.appendChild(logout_li);
-    }
 }
 
 // 3. 로그 아웃 버튼

@@ -1,4 +1,41 @@
 contents_url = "http://52.78.40.92:5001/contents?movie_id="
+
+function getCookie(cookie_name) {
+  var x, y;
+  var val = document.cookie.split(';');
+
+  for (var i = 0; i < val.length; i++) {
+    x = val[i].substring(0, val[i].indexOf('='));
+    y = val[i].substring(val[i].indexOf('=') + 1);
+    x = x.replace(/^\s+|\s+$/g, ''); // 앞과 뒤의 공백 제거하기
+    if (x == cookie_name) {
+      return unescape(y); // unescape로 디코딩 후 값 리턴
+    }
+  }
+}
+
+access_token = getCookie("token")
+
+function delCookie(key) {
+
+  getCookie(key)=""
+
+}
+if(access_token.length < 5){
+  let login_li = document.getElementById('login');
+  let register_li = document.getElementById("register");
+  let menu_bar = document.getElementById("menu-bar-ul")
+  login_li.parentNode.removeChild(login_li);
+  register_li.parentNode.removeChild(register_li);
+  let logout_li = document.createElement("li")
+  let logout_a = document.createElement("a")
+  logout_li.appendChild(logout_a);
+  logout_a.innerText="로그아웃"
+  logout_a.addEventListener("click",request_logout);
+  logout_li.id="logout"
+  menu_bar.appendChild(logout_li);
+}
+
 function request_search(keyword,provider) {
     encodeURI(encodeURIComponent(provider));
     encodeURI(encodeURIComponent(keyword));
